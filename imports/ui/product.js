@@ -1,20 +1,20 @@
 // import { Template } from 'meteor/templating';
 
-// import './category.html'
+// import './productCategory.html'
 
 
-// Template.category.onCreated(function categoryOnCreated() {
+// Template.productCategory.onCreated(function productOnCreated() {
 //   // counter starts at 0
 //   this.counter = new ReactiveVar(0);
 // });
 
-// Template.category.helpers({
+// Template.productCategory.helpers({
 //   counter() {
 //     return Template.instance().counter.get();
 //   },
 // });
 
-// Template.category.events({
+// Template.productCategory.events({
 //   'click button'(event, instance) {
 //     // increment the counter when button is clicked
 //     instance.counter.set(instance.counter.get() + 1);

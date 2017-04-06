@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './body.html';
-import './category.js';
+import './productCategory.js';
 
 Template.body.helpers({
 	
