@@ -1,35 +1,13 @@
 <template name="subsection-grain">
 	<div class="subsection-grain">
 		<img src="{{image}}" alt=":)" class="grain-img" />
-		<!-->Kartoffel, Getreide</!-->
+		<!--Kartoffel, Getreide-->
 		<div class="name">{{name}}</div>
 		<div class="descripton">{{discription}}</div>
-		<div class="weight">Gewicht: {{weight}}
-			<select class="select-weight">
-	            <option>1 kg</option>
-	            <option>2 kg</option>
-	            <option>3 kg</option>
-	            <option>4 kg</option>
-	            <option>5 kg</option>
-	            <option>10 kg</option>
-	            <option>25 kg</option>
-	            <option>50 kg</option>
-	        </select>
-	    </div>
-		<div class="quantity">Anzahl: 
-			<select class="select-quantity">
-	            <option>1</option>
-	            <option>2</option>
-	            <option>3</option>
-	            <option>4</option>
-	            <option>5</option>
-	            <option>6</option>
-	            <option>7</option>
-	            <option>8</option>
-	            <option>9</option>
-	            <option>10</option>
-	        </select>
-        </div>
+		<!--unit size 1kg-->
+		<form action="quantity">
+			Anzahl: <input type="number" name="amount"> {{unit}}
+		</form>
         <!-->calculate totalPrice with template.helper. See http://stackoverflow.com/questions/14426223/how-to-do-some-simple-math-in-meteors-template</!-->
         <div class="price">Preis: {{totalPrice}}</div>
 		<div class="AddToCart">Add to Order.</div>

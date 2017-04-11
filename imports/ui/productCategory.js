@@ -1,6 +1,6 @@
-// import { Template } from 'meteor/templating';
+import { Template } from 'meteor/templating';
 
-// import './productCategory.html'
+import './productCategory.html'
 
 
 // Template.productCategory.onCreated(function productOnCreated() {
