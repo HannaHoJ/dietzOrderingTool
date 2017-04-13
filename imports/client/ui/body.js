@@ -1,9 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Products } from '../collections/products.js';
 
-import './body.html';
-import './productCategory.js';
+
+// import './productCategory.js';
 
 Template.body.helpers({
 	
@@ -33,7 +32,15 @@ Template.body.events({
             var description = event.target.description.value;
 
             // Insert a product into the collection
-            Meteor.call('products.insert', productCategory, image, name, weight, unit, price, ingredients, description);
+            Meteor.call('products.insert', productCategory, image, name, weight, unit, price, ingredients, description, function (error, result){
+                  if(error){
+                        console.log("error");
+                        alert("You forgot to choose a product category!");
+                  }
+                  else{
+                        console.log("result");
+                  }
+            });
  
       
             // Clear form

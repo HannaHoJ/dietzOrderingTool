@@ -1,0 +1,12 @@
+<template name="component_footer">
+    <footer>
+        <div class="openHours">
+            Öffnungszeiten:
+            <div>Backtag ist jeden Dienstag von 09:00 bis 20:00 Uhr</div>
+            <div>Mo, Mi - Sa nach Vereinbarung</div>
+        </div>
+        <div class="section-contact">
+            {{# each contacts}} {{> contact}} {{/each}}
+        </div>
+    </footer>
+</template>

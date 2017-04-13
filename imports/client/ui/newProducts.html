@@ -1,0 +1,40 @@
+<template name="newProduct">
+    <form class="newProduct">
+        <select name="category" id="#category">
+            <option value="default"></option>
+            <option value="grains">Getreide</option>
+    		<option value="bread">Brot</option>
+    		<option value="milk">Milchprodukte</option>
+    		<option value="veggies">Obst und Gemüse</option>
+        </select> <br>
+        <input type="text" name="name" placeholder="add name" /><br>
+            {{#each error in errors "name"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="url" name="image" placeholder="add image" /><br>
+            {{#each error in errors "image"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="text" name="weight" placeholder="add weight" /><br>
+            {{#each error in errors "weight"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="text" name="unit" placeholder="add unit" /><br>
+            {{#each error in errors "unit"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="text" name="description" placeholder="add description" /><br>
+            {{#each error in errors "description"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="text" name="ingredients" placeholder="add ingredients" /><br>
+            {{#each error in errors "ingredients"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="text" name="price" placeholder="add price" /><br>
+            {{#each error in errors "price"}}
+                <div class="form-error">{{error}}</div>
+            {{/each}}
+        <input type="submit" value="submit" /><br>                      		
+    </form>
+</template>

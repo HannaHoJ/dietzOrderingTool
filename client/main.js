@@ -1,5 +1,9 @@
 // import './main.html';
-import '../imports/ui/login.js';
-import '../imports/ui/body.js';
-import '../imports/startup/accounts-config.js';
+import '../imports/client/ui/login.js';
+import '../imports/client/ui/body.js';
+import '../imports/client/startup/accounts-config.js';
+import '../imports/client/routing/routes.js';
+import '../imports/client/ui/pages/index.html';
+import '../imports/client/ui/pages/categories.html';
+
 
