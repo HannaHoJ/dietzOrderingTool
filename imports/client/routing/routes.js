@@ -5,7 +5,32 @@ Router.route('/', {
 	template: 'page_index'
 });
 
-Router.route('/categories', {
-	name: 'categories',
-	template: 'page_categories'
+Router.route('/Brot', {
+	name: 'bread',
+	template: 'page_bread'
+});
+
+Router.route('/Getreide', {
+	name: 'grains',
+	template: 'page_grains'
+});
+
+Router.route('/Milchprodukte', {
+	name: 'milk',
+	template: 'page_milk'
+});
+
+Router.route('/Gemüse', {
+	name: 'veggies',
+	template: 'page_veggies'
+});
+
+// Router.route('/Bestellung', {
+// 	name: 'order',
+// 	template: 'page_order'
+// });
+
+Router.route('/admin', {
+	name: 'admin',
+	template: 'page_admin'
 });

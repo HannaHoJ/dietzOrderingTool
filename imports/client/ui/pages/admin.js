@@ -1,22 +1,14 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
+import './admin.html';
 
-// import './productCategory.js';
-
-Template.body.helpers({
+Template.page_admin.helpers({
 	
 });
 
-Template.body.events({
-	'click .nav-container' : function () {
-	    document.getElementById("#sidenav").style.width = "150px";
-	},
-
-	/* Set the width of the side navigation to 0 */
-	'click .closebtn': function () {
-	    document.getElementById("#sidenav").style.width = "0";
-	},
+Template.page_admin.events({
+	
 
 	'submit .new-product': function(event) {
             // Prevent default browser form submit
