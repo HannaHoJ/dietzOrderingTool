@@ -20,7 +20,7 @@ Router.route('/Milchprodukte', {
 	template: 'page_milk'
 });
 
-Router.route('/Gemüse', {
+Router.route('/Obst und Gemüse', {
 	name: 'veggies',
 	template: 'page_veggies'
 });

@@ -6,7 +6,19 @@
             <div>Mo, Mi - Sa nach Vereinbarung</div>
         </div>
         <div class="section-contact">
-            {{# each contacts}} {{> contact}} {{/each}}
+            {{# each contacts}} {{> component_footer_contact}} {{/each}}
         </div>
     </footer>
+</template>
+
+<template name="component_footer_contact">
+    <div class="component_footer_contact">
+        <!--tasks: Getreide/Milchvieh, Hofladen/Brotbacken-->
+        <div class="task-field">{{task}}</div> 
+        <div class="name">{{name}} </div>
+        <div class="street">Lindlein 7</div>
+        <div class="town">74575 Schrozberg</div>
+        <div class="phone-number">Telefon: 07935 241</div>
+        <div class="mail">@mail: annegrets_briefkasten@web.de</div>
+    </div>
 </template>

@@ -2,6 +2,7 @@
 import '../imports/client/ui/components/login.js';
 import '../imports/client/ui/components/nav.js';
 import '../imports/client/ui/components/sidenav.js';
+import '../imports/client/ui/components/productCategory.js';
 import '../imports/client/startup/accounts-config.js';
 import '../imports/client/routing/routes.js';
 import '../imports/client/ui/pages/index.js';

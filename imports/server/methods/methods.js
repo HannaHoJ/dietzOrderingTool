@@ -1,11 +1,8 @@
 import { Meteor } from 'meteor/meteor';
-import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 import { Products } from '/imports/shared/collections/products.js';
 
 
-
-// export var Products = new Mongo.Collection('products');
 
 Meteor.methods({
     'products.insert': function(productCategory, image, name, weight, unit, price, ingredients, description) {
