@@ -1,8 +1,9 @@
 <template name="page_index">
-    categories
     <ul class="category-list">
-        {{#each productCategories}} 
-        	{{> component_productCategory}} 
-        {{/each}}
-    </ul>
+	    {{#if Template.subscriptionsReady}}
+	        {{#each productCategories}} 
+	        	{{> component_productCategory}}
+	        {{/each}}
+	    {{/if}}
+    </ul> 
 </template>

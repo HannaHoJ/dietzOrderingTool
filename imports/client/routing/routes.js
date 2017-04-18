@@ -20,7 +20,7 @@ Router.route('/Milchprodukte', {
 	template: 'page_milk'
 });
 
-Router.route('/Obst und Gemüse', {
+Router.route('/Frisches', {
 	name: 'veggies',
 	template: 'page_veggies'
 });
@@ -28,6 +28,19 @@ Router.route('/Obst und Gemüse', {
 // Router.route('/Bestellung', {
 // 	name: 'order',
 // 	template: 'page_order'
+	// data: function(){
+ //        var currentOrder = this.params._id;
+ //        var currentUser = Meteor.userId();
+ //        return Orders.findOne({ _id: currenOrder, createdBy: currentUser });
+ //    },
+ //    onBeforeAction: function(){
+ //        var currentUser = Meteor.userId();
+ //        if(currentUser){
+ //            this.next();
+ //        } else {
+ //            this.render("login");
+ //        }
+ //    }
 // });
 
 Router.route('/admin', {

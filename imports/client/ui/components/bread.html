@@ -1,0 +1,16 @@
+<template name="component_bread">
+	<div class="component_bread">
+		<img src="{{imageSrc this}}" alt=":)" class="bread-img" />
+		<div class="name">{{name this}}</div>
+		<div class="descripton">{{discription this}}</div>
+		<div class="ingredients">Zutaten{{ingredients this}}}</div>
+		<div class="weight">Gewicht: {{weight this}}</div>
+		<div class="price">Preis: {{price this}}</div>
+		<form action="quantity">
+			Anzahl: <input type="number" min="1" step="1" name="amount"> 
+		</form>
+		<div class="AddToCart">Add to Order.</div>
+		<div class = "productId">Produktnr: {{productId this}}</div>
+        <div class = "userId">{{userId}}</div>    
+	</div>
+</template>

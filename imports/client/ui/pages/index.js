@@ -4,11 +4,14 @@ import { Meteor } from 'meteor/meteor';
 import './index.html';
 
 window.p = Products;
-//TODO: setup something very similar to body.js and move the appropriate parts here
 
-//suscribe here ? with Template.page_index.onCreated({}) or only in the different Categories.
 
 const template = Template.page_index;
+
+template.onCreated(function(){
+	console.log('ddd');
+	Meteor.subscribe('products');	
+});
 
 template.helpers({
 	'productCategories': function(){
@@ -36,8 +39,5 @@ template.events({
 	}
 });
 
-template.onCreated(function(){
-	console.log('ddd');
-	Meteor.subscribe('products');	
-});
+
 

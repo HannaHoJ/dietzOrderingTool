@@ -7,9 +7,9 @@
 		<div class="descripton">{{discription}}</div>
 		<!--unit size 1kg-->
 		<form action="quantity">
-			Anzahl: <input type="number" name="amount"> {{unit}}
+			Anzahl: <input type="number" min="1" step="0.5" name="amount"> {{unit}}
 		</form>
-        <!-->calculate totalPrice with template.helper. See http://stackoverflow.com/questions/14426223/how-to-do-some-simple-math-in-meteors-template</!-->
+        <!--calculate totalPrice with template.helper. See http://stackoverflow.com/questions/14426223/how-to-do-some-simple-math-in-meteors-template-->
         <div class="price">Preis: {{totalPrice}}</div>
 		<div class="AddToCart">Add to Order.</div>
 		<div class = "productId">Produktnr: {{productId}}</div>

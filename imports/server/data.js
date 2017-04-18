@@ -5,7 +5,7 @@ console.log("product scrit");
 
 if (Products.find({}).count() === 0) {
     const products = [{
-        category: "Brot",
+        category: "bread",
         name: "Roggenbrot",
         weight: 750,
         unit: "g",
@@ -14,7 +14,7 @@ if (Products.find({}).count() === 0) {
         ingredients: "Roggenmehl, Weizenmehl, Wasser, Hefe, Salz, Gewürze",
         createdAt: new Date(),
     }, {
-        category: "Brot",
+        category: "grains",
         name: "Dinkel",
         weight: 100,
         unit: "kg",
@@ -22,7 +22,7 @@ if (Products.find({}).count() === 0) {
         description: "Dinkel gereinigt",
         createdAt: new Date(),
     }, {
-        category: "Milchprodukte",
+        category: "milk",
         name: "unbehandelte Milch",
         weight: 1,
         unit: "liter",
@@ -30,7 +30,7 @@ if (Products.find({}).count() === 0) {
         description: "nicht homogenisierte und pasteurisierte Milch",
         createdAt: new Date(),
     }, {
-        category: "Obst und Gemüse",
+        category: "veggies",
         name: "Kartoffeln",
         weight: 20,
         unit: "kg",

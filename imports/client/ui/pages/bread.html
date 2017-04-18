@@ -1,17 +1,8 @@
 
 <template name="page_bread">
-	<div class="page_bread">
-		<img src="{{image}}" alt=":)" class="bread-img" />
-		<div class="name">{{name}}</div>
-		<div class="descripton">{{discription}}</div>
-		<div class="ingredients">Zutaten{{ingredients}}}</div>
-		<div class="weight">Gewicht: {{weight}}</div>
-		<div class="price">Preis: {{price}}</div>
-		<form action="quantity">
-			Anzahl: <input type="number" name="amount"> 
-		</form>
-		<div class="AddToCart">Add to Order.</div>
-		<div class = "productId">Produktnr: {{productId}}</div>
-        <div class = "userId">{{userId}}</div>    
-	</div>
+	<ul class="page_bread">  
+	    {{#each bread}} 
+	       	{{> component_bread}}
+	    {{/each}}    
+    </ul>   
 </template>
