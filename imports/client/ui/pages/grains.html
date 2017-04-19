@@ -1,17 +1,18 @@
 
 <template name="page_grains">
 	<div class="page_grains">
-		<img src="{{image}}" alt=":)" class="grain-img" />
+		<img src="{{imageSrc name}}" alt=":)" class="grain-img" />
 		<!--Kartoffel, Getreide-->
 		<div class="name">{{name}}</div>
-		<div class="descripton">{{discription}}</div>
+		<div class="descripton">{{description}}</div>
+		<div class="price">Preis: {{price}} € pro {{unit}} </div>
 		<!--unit size 1kg-->
 		<form action="quantity">
 			Anzahl: <input type="number" min="1" step="0.5" name="amount"> {{unit}}
 		</form>
         <!--calculate totalPrice with template.helper. See http://stackoverflow.com/questions/14426223/how-to-do-some-simple-math-in-meteors-template-->
-        <div class="price">Preis: {{totalPrice}}</div>
-		<div class="AddToCart">Add to Order.</div>
+        
+		<div class="addToCart">Add to Order</div>
 		<div class = "productId">Produktnr: {{productId}}</div>
         <div class = "userId">{{userId}}</div>    
 	</div>

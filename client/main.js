@@ -9,7 +9,7 @@ import '../imports/client/ui/components/footer';
 import '../imports/client/startup/accounts-config.js';
 
 import '../imports/client/routing/routes.js';
-
+import '../imports/client/ui/pages/order.js';
 import '../imports/client/ui/pages/index.js';
 import '../imports/client/ui/pages/admin.js';
 import '../imports/client/ui/pages/bread.js';

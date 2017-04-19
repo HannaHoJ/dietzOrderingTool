@@ -1,16 +1,20 @@
+
 <template name="component_bread">
 	<div class="component_bread">
 		<img src="{{imageSrc name}}" alt=":)" class="bread-img" />
 		<div class="name">{{name}}</div>
-		<div class="descripton">{{discription this}}</div>
-		<div class="ingredients">Zutaten{{ingredients this}}}</div>
-		<div class="weight">Gewicht: {{weight this}}</div>
-		<div class="price">Preis: {{price this}}</div>
+		<div class="descripton">{{description}}</div>
+		<div class="ingredients">Zutaten: {{ingredients}}</div>
+		<div class="weight">Gewicht: {{weight}} {{unit}}</div>
+		<div class="price">Preis: {{price}} €</div>
+		{{# if currentUser}}
 		<form action="quantity">
 			Anzahl: <input type="number" min="1" step="1" name="amount"> 
+			<input class="addToOrder" type="submit" value="Add to Order" />
+			<input class="userId" type="hidden" value="{{ userId }}" />
 		</form>
-		<div class="AddToCart">Add to Order.</div>
-		<div class = "productId">Produktnr: {{productId this}}</div>
-        <div class = "userId">{{userId}}</div>    
+		{{else}}
+			<div class="not-user">Please log in for Ordering!</div>
+		{{/if}}
 	</div>
 </template>
