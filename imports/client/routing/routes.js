@@ -6,22 +6,22 @@ Router.route('/', {
 });
 
 Router.route('/Brot', {
-	name: 'bread',
+	name: 'Brot',
 	template: 'page_bread'
 });
 
 Router.route('/Getreide', {
-	name: 'grains',
+	name: 'Getreide',
 	template: 'page_grains'
 });
 
 Router.route('/Milchprodukte', {
-	name: 'milk',
+	name: 'Milchprodukte',
 	template: 'page_milk'
 });
 
 Router.route('/Frisches', {
-	name: 'veggies',
+	name: 'Obst und Gemüse',
 	template: 'page_veggies'
 });
 
