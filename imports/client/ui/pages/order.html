@@ -1,7 +1,9 @@
 <template name="page_order">
+	{{> component_nav}}
 	<div class="page_order">
-		<!-- {{#each}}
+		<h3>Bestellte Artikel: </h3>
+		{{#each order}}
 			{{> component_order}}
-		{{/each}} -->
+		{{/each}} 
 	</div>
 </template>

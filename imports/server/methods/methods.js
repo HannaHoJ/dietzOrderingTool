@@ -45,7 +45,7 @@ Meteor.methods({
         }
 
         var newItem = {
-            orderedItem: name,
+            name: name,
             amount: amount,
             price: price,
             productId: id,
@@ -53,9 +53,7 @@ Meteor.methods({
 
         console.log('userid = ' + this.userId);
         var orderExists = Orders.find({ userId: this.userId }).count();
-        console.log(' oe:  ' + orderExists);
         if (orderExists === 0) {
-            console.log(' no order, inserting')
             var items = [];
             items.push(newItem);
             Orders.insert({
@@ -65,13 +63,19 @@ Meteor.methods({
                 state: 'open',
                 createdAt: new Date(),
             });
-        } else { //else insert a new order
-            console.log(' order found, updating')
-
+        } else { 
             //if open order exists, update that order
             Orders.update({ userId: this.userId }, { $push: { items: newItem } });
         }
 
+    },
+
+    'item.remove': function(productId){
+        if (!this.userId) {
+            throw new Meteor.Error('not-authorized');
+        }
+        check(productId, String);
+        Orders.update({ userId: this.userId }, { $pull: { 'items': { productId: productId } } });
     },
 
     'products.remove': function(productId) {
@@ -81,12 +85,6 @@ Meteor.methods({
         // }
         Products.remove(productId);
     },
-    'orders.remove': function(productId) {
-        check(productId, String);
-        if (product.owner != this.userId) {
-            throw new Meteor.Error('not-authorized');
-        }
-        Orders.remove(prodcutId);
-    },
+    
 
 });

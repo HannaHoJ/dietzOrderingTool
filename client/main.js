@@ -5,7 +5,8 @@ import '../imports/client/ui/components/sidenav.js';
 import '../imports/client/ui/components/productCategory.js';
 import '../imports/client/ui/components/bread.js';
 import '../imports/client/ui/components/footer';
-
+import '../imports/client/ui/components/order.js';
+import '../imports/client/ui/components/cartLink.js';
 import '../imports/client/startup/accounts-config.js';
 
 import '../imports/client/routing/routes.js';

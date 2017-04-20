@@ -1,5 +1,19 @@
 <template name="component_order">
 	<div class="component_order">
+		<!-- {{# if currentUser}} -->
+		
+			<div classs="name"> {{name}}</div>
+			<div class="amount"> {{amount}}</div>
+			<div class="price">{{price}}</div>
+			<div class="subtotal">{{subtotal}}</div>
+			<!-- <input class="delete-button" type="submit" value="delete"/>  -->
+			<button class = "btn-delete"><i class = "fa fa-trash"></i>&times;</button>
+			<input class="productId" type="hidden" value="{{ productId }}" />
+			<input class="userId" type="hidden" value="{{ userId }}" />
+		
+		<!-- {{else}}
+			<div class="not-user">Please log in for Ordering!</div>
+		{{/if}} -->
 		
 	</div>
 </template>

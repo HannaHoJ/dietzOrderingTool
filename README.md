@@ -15,12 +15,15 @@
 
 #Orders
 
+-TODO: routing to order over order button (cartLink) in header (nav.js) 
+
 - Order collections //will need userId, see documentation for Meteor.userId(), Meteor.user(), which should work in the browser, but is called slightly differntly from the server (you will have to login first, so put the login component back in)
  
-- add to order  --> insert in order 
 
 - create a order list containing: product number, amount, name of product, calculating total price, delete button.
 		-> has to be bound to user: 
+	TODO: calculating subtotal and adding to order in mongoDB
+	TODO: calculating total out of subtotal
 
 
 

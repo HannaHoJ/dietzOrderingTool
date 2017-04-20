@@ -20,14 +20,14 @@ Router.route('/Milchprodukte', {
 	template: 'page_milk'
 });
 
-Router.route('/Frisches', {
+Router.route('/Obst und Gemüse', {
 	name: 'Obst und Gemüse',
 	template: 'page_veggies'
 });
 
-// Router.route('/Bestellung', {
-// 	name: 'order',
-// 	template: 'page_order'
+Router.route('/Bestellung', {
+	name: 'order',
+	template: 'page_order'
 	// data: function(){
  //        var currentOrder = this.params._id;
  //        var currentUser = Meteor.userId();
@@ -41,7 +41,7 @@ Router.route('/Frisches', {
  //            this.render("login");
  //        }
  //    }
-// });
+});
 
 Router.route('/admin', {
 	name: 'admin',

@@ -9,9 +9,10 @@ window.p = Products;
 const template = Template.page_index;
 
 template.onCreated(function(){
-	console.log('ddd');
+	console.log('suscribed to products in index.js');
 	Meteor.subscribe('products');	
 });
+
 
 template.helpers({
 	'productCategories': function(){
