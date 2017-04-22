@@ -36,19 +36,26 @@ Meteor.methods({
 
     },
 
-    'orders.insert': function(name, amount, price, id) {
+    'orders.insert': function(name, amount, price, productId) {
         if (!this.userId) {
-            throw new Meteor.Error('not-authorized');
+            throw new Meteor.Error(500, 'not-authorized');
         }
         if (amount === '') {
             throw new Meteor.Error(500, 'The amount of the product is missing');
         }
 
+        var subtotal = parseFloat(amount) * parseFloat(price.replace(/,/g, "."));
+        //replace dot with comma in subtotal
+        var subtotalString = subtotal.toString();
+        subtotalComma = subtotalString.replace(/\./g, ",");
+        console.log('subtotal: ' + subtotalComma);
+
         var newItem = {
             name: name,
             amount: amount,
             price: price,
-            productId: id,
+            productId: productId,
+            subtotal: subtotalComma,
         };
 
         console.log('userid = ' + this.userId);

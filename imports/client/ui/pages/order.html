@@ -1,9 +1,23 @@
 <template name="page_order">
-	{{> component_nav}}
-	<div class="page_order">
-		<h3>Bestellte Artikel: </h3>
-		{{#each order}}
-			{{> component_order}}
-		{{/each}} 
-	</div>
+      <!-- {{#if currentUser}} -->
+    <div class="page_order">
+       
+	        <h3>Bestellte Artikel: </h3> 
+
+	        <div class="item-list">
+		        {{#each order}} 
+		        	{{> component_order}} 
+		        {{/each}} 
+	        </div>
+	        <div class="total">Endsumme: {{ total }} €</div>
+	        <form class="submit-order">
+	        	<input type="submit" value="Bestellung abschicken"/> 
+	        	<!-- <input class="orderId" type="hidden" value="{{ _id }}" /> -->
+        		<input class="userId" type="hidden" value="{{ userId }}" />
+	        </form>
+       
+    </div>
+     <!-- {{else}}
+       		<div class="not-user">Please log in for Ordering!</div>
+        {{/if}} -->
 </template>

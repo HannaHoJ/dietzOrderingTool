@@ -7,14 +7,14 @@
 		<div class="ingredients">Zutaten: {{ingredients}}</div>
 		<div class="weight">Gewicht: {{weight}} {{unit}}</div>
 		<div class="price">Preis: {{price}} €</div>
-		{{# if currentUser}}
+		<!-- {{# if currentUser}} -->
 		<form action="quantity">
 			Anzahl: <input type="number" min="1" step="1" name="amount"> 
 			<input class="addToOrder" type="submit" value="Add to Order" />
 			<input class="userId" type="hidden" value="{{ userId }}" />
 		</form>
-		{{else}}
+	<!-- 	{{else}}
 			<div class="not-user">Please log in for Ordering!</div>
-		{{/if}}
+		{{/if}} -->
 	</div>
 </template>

@@ -16,6 +16,7 @@ template.events({
 
     'submit .component_bread': function(event, instance) {
         event.preventDefault();
+       
         var amount = event.target.amount.value;
         // Insert a order into the collection
         Meteor.call('orders.insert', instance.data.name, amount, instance.data.price, instance.data._id, instance.data.userId, function(error, result) {
