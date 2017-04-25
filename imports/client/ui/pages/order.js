@@ -10,7 +10,9 @@ const template = Template.page_order;
 
 
 const getActiveOrder = function(){
-	return Orders.findOne();
+	var order = Orders.findOne({ $and: [{}, { state: 'open' } ] });
+	console.log('extracted order: ' + order);
+	return order;
 };
 
 template.onCreated(function(){
@@ -41,8 +43,15 @@ template.events({
 		//changes status of Order to state = 'submitted'
 		// TODO: _id ist not defined
 		const order = getActiveOrder();
-		Orders.update({ _id: order._id}, { $set: { state: 'submitted'} });
 
+		Meteor.call('state.submit', order._id, function(error, result){
+				if (error) {
+                console.log("error");
+                alert("The state of the order did not change!");
+            } else {
+             	 console.log("result");
+            }
+		});
 		
 		Router.go('submit-order', {userId: this.userId});
 

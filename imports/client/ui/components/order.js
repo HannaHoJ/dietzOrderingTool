@@ -5,7 +5,7 @@ import './order.html';
 
 window.o = Orders;
 
-const template = Template.component_order;
+const template = Template.component_order_item;
 
 template.helpers({
 	

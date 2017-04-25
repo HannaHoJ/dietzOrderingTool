@@ -77,6 +77,11 @@ Meteor.methods({
 
     },
 
+    'state.submit': function(orderId){
+        check(orderId, String);
+        Orders.update(  { _id: orderId } , { $set: { state: 'submitted'} });
+    },
+
     'item.remove': function(productId){
         if (!this.userId) {
             throw new Meteor.Error('not-authorized');

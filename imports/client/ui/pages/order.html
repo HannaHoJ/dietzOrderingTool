@@ -6,10 +6,11 @@
 
 	        <div class="item-list">
 		        {{#each order.items}} 
-		        	{{> component_order}} 
+		        	{{> component_order_item}} 
 		        {{/each}} 
 	        </div>
-	        <div class="total">Endsumme: {{ total }} €</div>
+
+	        <div class="total" type="hidden">Endsumme: {{ total }} €</div>
 	        <form class="submit-order">
 	        	<input type="submit" value="Bestellung abschicken"/> 
 	        	<!-- <input class="orderId" type="hidden" value="{{ _id }}" /> -->

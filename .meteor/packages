@@ -38,3 +38,4 @@ gwendall:auth-client-callbacks
 check
 aldeed:simple-schema
 mdg:validated-method
+#audit-argument-checks			#checks Validation of all Methods and publication arguments automatically
